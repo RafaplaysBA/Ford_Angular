@@ -1,0 +1,142 @@
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+     
+    
+}
+section{
+    display: flex;
+    width: 50%;
+
+
+}
+ 
+ .container-car {
+  
+  margin: auto;
+
+
+}
+
+.container-car img {
+    width: 100%;
+
+ 
+ 
+}
+
+.container_logo{
+    width: 250px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin:auto;
+    
+    
+   
+  
+
+}
+
+.logo{
+    width: 100%;
+
+
+    
+  
+}
+
+.area_login{
+    width: 50%;
+    
+    background-color:#f1f1f1;
+    
+
+}
+
+h1{
+    color:blue;
+    text-align: center;
+    margin-bottom: 20px;
+    
+  
+}
+
+.form_login{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    gap: 15px;
+    margin-top: 210px;
+    justify-content: center;
+   
+   
+    
+
+
+}
+
+.usuario input{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    padding: 15px;
+    text-indent: 12px;
+    
+    
+}
+
+.senha input{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 15px;
+    text-indent: 14px;
+}
+
+.automatico {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   justify-content: flex-end;
+   width: 100%;
+   
+
+}
+
+.btn_login{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    color: gray;
+}
+
+p{
+    font-size: 20px;
+}
+
+#icone_usuario{
+    width: 20px;
+    position: relative;
+    top: 45px;
+    left: 5px;
+
+}
+
+#icone_senha{
+    width: 20px;
+    position: relative;
+    top: 55px;
+    left: 4px;
+
+
+    
+   
+
+}
