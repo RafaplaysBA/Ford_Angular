@@ -1,0 +1,67 @@
+main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/img/ranger.png");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+}
+
+.carro{
+    justify-content: center;
+    width: 50%;
+    left: 220px;
+    top: 150px;
+    display: flex;
+  
+  
+}
+
+.tela{
+    left:50%;
+    border: 1px solid black;
+    width: 60%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.514);
+ 
+    
+
+
+
+}
+
+header{
+    background-color: transparent;
+    color : white;
+    text-align: center;
+    padding: 10px
+}
+
+.system{
+    border-bottom: 1px solid black;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.377);
+
+
+
+
+    
+}
+
+p{
+    padding: 10px;
+    color: blue;
+
+}
+
+main section{
+   
+   width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+
+}
