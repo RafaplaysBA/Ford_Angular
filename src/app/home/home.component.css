@@ -32,6 +32,7 @@ main{
 
 }
 
+
 header{
     background-color: transparent;
     color : white;
@@ -64,4 +65,30 @@ main section{
     height: 100%;
     align-items: center;
 
+}
+.hamburguer{
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
+
+.menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    max-height: 200px;
+
+
+
+}
+
+.menu_ativo{
+    max-height: 500px;
 }

@@ -1,0 +1,86 @@
+h1{
+
+    color: blue;
+    text-align: center;
+    margin-top: 45px;
+
+
+    
+}
+
+h3{
+    margin-top: 45px;
+    color: blue;
+    font-size: 35px;
+    text-align: center;
+    
+
+}
+p{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 14px;
+}
+
+.tela_01{
+    border: 1px solid black;
+    width: 190px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, 0.514);
+    margin-left: 13%;
+    margin-top: 100px;
+    
+}
+
+h2{
+    border-bottom: 1px solid black;
+    padding: 17px;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+select{
+    width: 80%;
+    height: 18px;
+    margin: 22px;
+    border-radius: 5px;
+}
+
+.tela_02{
+    border: 1px solid black;
+    width: 190px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, 0.514);
+    margin-left: 33%;
+    margin-top: -190px;
+   
+
+}
+
+.tela_03{
+    border: 1px solid black;
+    width: 190px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, 0.514);
+    margin-left: 50%;
+    margin-top: -190px;}
+
+
+
+.tela_04{
+    border: 1px solid black;
+    width: 220px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.514);
+    margin-left: 67%;
+    margin-top: -190px;
+ 
+  
+}
+
+.carro_conteiner{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+
+    
+}
