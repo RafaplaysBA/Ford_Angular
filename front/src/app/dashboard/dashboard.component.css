@@ -13,6 +13,7 @@ h3{
     color: blue;
     font-size: 35px;
     text-align: center;
+
     
 
 }
@@ -22,13 +23,20 @@ p{
     margin-top: 14px;
 }
 
-.tela_01{
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tela{
     border: 1px solid black;
-    width: 190px;
-    height: 190px;
+    width: 220px;
+    height: 220px;
     background-color: rgba(255, 255, 255, 0.514);
-    margin-left: 13%;
     margin-top: 100px;
+    margin-left: 190px;
+
     
 }
 
@@ -45,37 +53,9 @@ select{
     border-radius: 5px;
 }
 
-.tela_02{
-    border: 1px solid black;
-    width: 190px;
-    height: 190px;
-    background-color: rgba(255, 255, 255, 0.514);
-    margin-left: 33%;
-    margin-top: -190px;
-   
-
-}
-
-.tela_03{
-    border: 1px solid black;
-    width: 190px;
-    height: 190px;
-    background-color: rgba(255, 255, 255, 0.514);
-    margin-left: 50%;
-    margin-top: -190px;}
 
 
 
-.tela_04{
-    border: 1px solid black;
-    width: 220px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.514);
-    margin-left: 67%;
-    margin-top: -190px;
- 
-  
-}
 
 
 .carro{
