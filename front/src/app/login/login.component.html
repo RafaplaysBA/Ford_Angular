@@ -1,32 +1,32 @@
 <main>
-    <section>
-        <div class ="container-car">
-            <img src="img/ranger.png" alt="carro">
-        </div>
-    </section>
-    <div class="area_login">
-    <div class ="container_logo">
-        <img src="img/ford.png"  class="logo">
-    </div>
-  <div>
-    <form class="form_login">
-        <div class="usuario">
-          <h1> Boas Vindas!</h1>
-          <img src="img/icons8-usuário-32.png" alt="icone_usuario " id="icone_usuario">
-
-          <input type="text" id="username" name="username" placeholder="insira seu e-mail">
-        </div>
-        <div class="senha">
-            <img src="img/icons8-senha-50.png" alt="icone_senha" id="icone_senha">
-            <input type="password" id="password" name="password" placeholder="insira sua senha">  
-        </div>
-        <div class="automatico">
-            <p>logar automaticamente </p>
-             <input type="checkbox" id="marcar" name="">
-        </div>
-        <button type="submit" class="botao-entrar" (click)="authentication()">Entrar</button>
-    </form>
+  <section>
+      <div class ="container-car">
+          <img src="img/ranger.png" alt="carro">
+      </div>
+  </section>
+  <div class="area_login">
+  <div class ="container_logo">
+      <img src="img/ford.png"  class="logo">
   </div>
-    
+<div>
+  <form class="form_login">
+      <div class="usuario">
+        <h1> Boas Vindas!</h1>
+        <img src="img/icons8-usuário-32.png" alt="icone_usuario " id="icone_usuario">
+
+        <input type="text" id="username" name="username" placeholder="insira seu e-mail"   [(ngModel)]= "nome">
+      </div>
+      <div class="senha">
+          <img src="img/icons8-senha-50.png" alt="icone_senha" id="icone_senha">
+          <input type="password" id="password" name="password" placeholder="insira sua senha"  [(ngModel)]= "senha">  
+      </div>
+      <div class="automatico">
+          <p>logar automaticamente </p>
+           <input type="checkbox" id="marcar" name="">
+      </div>
+      <button type="submit" class="botao-entrar" (click)="authentication()">Entrar</button>
+  </form>
+</div>
+  
 </div>
 </main>

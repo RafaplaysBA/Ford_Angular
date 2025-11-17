@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; //Importando o formmodule
-import { CommonModule } from '@angular/common'; //Importando o CommonModule
-import { Usuario } from '../models/usuario.model';
+import { FormsModule } from '@angular/forms';
 import { LoginService } from '../services/login.service';
+import { Usuario } from '../models/usuario.model';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 
 @Component({
@@ -13,21 +14,25 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+ 
+  constructor(private loginService: LoginService , private router: Router){
 
-  constructor(private loginService: LoginService, private router: Router) {
   }
 
-  nome!: string;
-  password!: string;
   usuario!: Usuario;
+  senha!: string 
+  nome!: string
 
+  
+ 
   public authentication(): void {
-    this.loginService.obterUsuarios
-      (this.nome, this.password!).subscribe({
+    this.loginService.login
+      (this.nome, this.senha!).subscribe({
         next: (user: Usuario) => {
           if (user.nome === this.nome) {
-            //this.router.navigate(['/home']);
-            alert('Deu bom porra')
+            this.router.navigate(['/home']);
+            alert("Usuário autenticado com sucesso!");
+            
             console.log(user.id, user.nome, user.email);
           }
         },
@@ -38,4 +43,9 @@ export class LoginComponent {
       });
     }
 
-  }
+
+
+ 
+
+  
+}
