@@ -7,11 +7,10 @@
         <div class="tela">
             <div class="veiculo">
                 <h2>veiculo</h2>
-                <select name="veiculos">
-                    <option value="Ranger">Ranger</option>
-                    <option value="Mustang">Mustang</option>
-                    <option value="territory">territory</option>
-                    <option value="Bronco_sport">Bronco sport</option>
+                <select [(ngModel)]="selectedVehicle">
+                    <option *ngFor="let vehicle of vehicles" [ngValue]="vehicle">
+                        {{ vehicle.vehicle }}
+                    </option>
                 </select>
             </div>
         </div>
@@ -19,7 +18,7 @@
         <div class="tela">
             <div class="vendas">
                 <h2>total de vendas</h2>
-                <h3>1500</h3>
+                <p *ngIf="selectedVehicle">{{ selectedVehicle.volumetotal }}</p>
                 <p>unid.</p>
             </div>
         </div>
@@ -27,7 +26,7 @@
         <div class="tela">
             <div class="conectados">
                 <h2>conectados</h2>
-                <h3>500</h3>
+                <p *ngIf="selectedVehicle">{{ selectedVehicle.connected }}</p>
                 <p>unid.</p>
             </div>
         </div>
@@ -35,7 +34,7 @@
         <div class="tela">
             <div class="update">
                 <h2>Update Software</h2>
-                <h3>750</h3>
+                <p *ngIf="selectedVehicle">{{selectedVehicle.softwareUpdates}}</p>
                 <p>unid.</p>
             </div>
         </div>
@@ -45,7 +44,7 @@
   
     <div class="carro_conteiner">
         <div class="carro">
-            <img src="img/mustang.png"  alt="ford_mustang">
+            <img *ngIf = "selectedVehicle" src = {{selectedVehicle.img}} alt="imagem veiculo">
         </div>
         
     </div>

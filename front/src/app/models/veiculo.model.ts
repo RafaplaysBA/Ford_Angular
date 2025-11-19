@@ -5,7 +5,8 @@ export interface Veiculo{
   vehicle: string
   volumetotal: number | string
   connected: number | string
-  softwareUpdates: number | string
+  softwareUpdates: number | string 
+  img: string
 }
 
 export interface VeiculosAPI {
