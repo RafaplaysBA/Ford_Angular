@@ -1,0 +1,86 @@
+/* O Container do Menu */
+.menu-container {
+    position: relative;
+}
+
+/* O Ícone Hamburguer */
+.menu-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* As 3 linhas do hamburguer */
+.menu-button span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: rgba(0, 162, 255, 0.986);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* A Caixa do Menu (Links) */
+.menu-items {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(17, 108, 194, 0.986);
+    padding-top: 80px;
+
+    /* ANIMAÇÃO: Começa fora da tela (esquerda) */
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-bottom: 1px solid #34495e;
+    transition: background 0.2s;
+}
+
+.menu-items a:hover {
+    background-color: blue;
+    padding-left: 40px;
+}
+
+.logout-link {
+    cursor: pointer;
+}
+
+/* Quando o menu está aberto */
+.menu-items.open {
+    transform: translateX(0);
+}
+
+/* Transforma o ícone hamburguer em um X quando aberto */
+.menu-button span.open:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 8px);
+    background-color: #ecf0f1;
+}
+
+.menu-button span.open:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button span.open:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -8px);
+    background-color: #ecf0f1;
+}

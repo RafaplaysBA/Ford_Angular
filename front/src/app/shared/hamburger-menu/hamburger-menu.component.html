@@ -1,0 +1,13 @@
+<nav class="menu-container">
+    <div class="menu-button" (click)="toggleMenu()">
+        <span [class.open]="isOpen"></span>
+        <span [class.open]="isOpen"></span>
+        <span [class.open]="isOpen"></span>
+    </div>
+
+    <div class="menu-items" [class.open]="isOpen">
+        <a routerLink="/home" (click)="closeMenu()">Home</a>
+        <a routerLink="/dashboard" (click)="closeMenu()">Dashboard</a>
+        <a (click)="logout()" class="logout-link">Sair</a>
+    </div>
+</nav>

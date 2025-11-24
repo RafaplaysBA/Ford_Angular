@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { HamburgerMenuComponent } from '../shared/hamburger-menu/hamburger-menu.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [HamburgerMenuComponent],
 
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
- 
+
 }
 
 
