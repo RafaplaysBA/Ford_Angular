@@ -32,7 +32,7 @@ export class DashboardComponent {
     }
     );
   }
-
+  
   public getVehicleById(id: Number): void {
     for (let vehicle of this.vehicles) {
       if (vehicle.id === id) {
@@ -41,3 +41,4 @@ export class DashboardComponent {
     }
   }
 }
+

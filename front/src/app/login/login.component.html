@@ -1,32 +1,49 @@
-<main>
-  <section>
-      <div class ="container-car">
-          <img src="img/ranger.png" alt="carro">
-      </div>
-  </section>
-  <div class="area_login">
-  <div class ="container_logo">
-      <img src="img/ford.png"  class="logo">
+<div class="sessao-pai">
+  <div class="sessao-carro">
+    <img src="img/ranger.png" alt="">
   </div>
-<div>
-  <form class="form_login">
-      <div class="usuario">
-        <h1> Boas Vindas!</h1>
-        <img src="img/icons8-usuário-32.png" alt="icone_usuario " id="icone_usuario">
 
-        <input type="text" id="username" name="username" placeholder="insira seu e-mail"   [(ngModel)]= "nome">
-      </div>
-      <div class="senha">
-          <img src="img/icons8-senha-50.png" alt="icone_senha" id="icone_senha">
-          <input type="password" id="password" name="password" placeholder="insira sua senha"  [(ngModel)]= "senha">  
-      </div>
-      <div class="automatico">
-          <p>logar automaticamente </p>
-           <input type="checkbox" id="marcar" name="">
-      </div>
-      <button type="submit" class="botao-entrar" (click)="authentication()">Entrar</button>
-  </form>
+  <div class="sessao-form">
+    <section class="sessao-form-logo">
+      <img src="img/ford.png" alt="">
+    </section>
+    <section class="sessao-form-div">
+      <h1>Boas-vindas</h1>
+      <section class="sessao-form-form">
+        <form action="submit" class="formulario">
+
+          <div class="sessao-form-form-div">
+            <div class="input-wrapper">
+              <input class="sessao-form-form-item-email sessao-form-form-item" type="email" id="email" name="email"
+                placeholder="Insira seu e-mail" [(ngModel)] = "nome">
+            </div>
+            <img src="img/icon_info.svg" alt="Informação" class="icon-outside-info">
+          </div>
+
+          <div class="sessao-form-form-div">
+            <div class="input-wrapper">
+              <input class="sessao-form-form-item-senha sessao-form-form-item" type="password" id="password"
+                name="password" placeholder="Insira sua senha" [(ngModel)] = 'senha'>
+              <img src="img/icons8-senha-50.png" alt="ocultar senha" class="icon-input-right">
+            </div>
+            <div class="icon-outside-placeholder"></div>
+          </div>
+          <div class="sessao-form-form-div">
+
+            <div class="sessao-form-form-login-auto">
+              <label for="login-auto-checkbox" class="login-auto-label-texto">Logar automaticamente</label>
+              <div class="login-auto-controles">
+                <input type="checkbox" id="login-auto-checkbox" class="login-auto-switch-input" />
+                <label for="login-auto-checkbox" class="login-auto-switch-label"></label>
+              </div>
+            </div>
+
+            <img src="img/icon_info.svg" alt="Informação" class="icon-outside-info">
+
+          </div>
+          <button type="submit" class="botao-entrar" (click)="authentication()">Entrar</button>
+        </form>
+      </section>
+    </section>
+  </div>
 </div>
-  
-</div>
-</main>

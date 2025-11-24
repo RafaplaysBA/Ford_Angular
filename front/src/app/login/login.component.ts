@@ -30,6 +30,7 @@ export class LoginComponent {
       (this.nome, this.senha!).subscribe({
         next: (user: Usuario) => {
           if (user.nome === this.nome) {
+            localStorage.setItem('usuario', JSON.stringify(user));
             this.router.navigate(['/home']);
             alert("Usuário autenticado com sucesso!");
             
