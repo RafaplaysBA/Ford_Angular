@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule, FormsModule, ],
+  imports: [CommonModule, FormsModule,],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -18,8 +18,12 @@ export class DashboardComponent {
 
   public vehicles!: Veiculos;
 
-  public constructor(private vehicleService: VehicleService, ) {
-  
+  public vinCode: string = '';
+
+  public vehicleInfo: any = null;
+
+  public constructor(private vehicleService: VehicleService,) {
+
     this.getVehicles();
   }
 
@@ -32,13 +36,29 @@ export class DashboardComponent {
     }
     );
   }
-  
+
   public getVehicleById(id: Number): void {
     for (let vehicle of this.vehicles) {
       if (vehicle.id === id) {
         this.selectedVehicle = vehicle;
       }
     }
+  }
+
+  public searchByVin(): void {
+    if (!this.vinCode || this.vinCode.trim() === '') {
+      return;
+    }
+
+    this.vehicleService.getInfoVehicles(this.vinCode).subscribe({
+      next: (data) => {
+        this.vehicleInfo = data;
+      },
+      error: (error) => {
+        console.error('Erro ao buscar dados do veículo:', error);
+        this.vehicleInfo = null;
+      }
+    });
   }
 }
 

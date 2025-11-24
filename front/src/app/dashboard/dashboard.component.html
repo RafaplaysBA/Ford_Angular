@@ -6,7 +6,7 @@
     <div class="container">
         <div class="tela">
             <div class="veiculo">
-                <h2>veiculo</h2>
+                <h2>veículo</h2>
                 <select [(ngModel)]="selectedVehicle">
                     <option *ngFor="let vehicle of vehicles" [ngValue]="vehicle">
                         {{ vehicle.vehicle }}
@@ -14,7 +14,7 @@
                 </select>
             </div>
         </div>
-    
+
         <div class="tela">
             <div class="vendas">
                 <h2>total de vendas</h2>
@@ -22,7 +22,7 @@
                 <p>unid.</p>
             </div>
         </div>
-    
+
         <div class="tela">
             <div class="conectados">
                 <h2>conectados</h2>
@@ -30,7 +30,7 @@
                 <p>unid.</p>
             </div>
         </div>
-    
+
         <div class="tela">
             <div class="update">
                 <h2>Update Software</h2>
@@ -39,14 +39,14 @@
             </div>
         </div>
     </div>
-    
 
-  
+
+
     <div class="carro_conteiner">
         <div class="carro">
-            <img *ngIf = "selectedVehicle" src = {{selectedVehicle.img}} alt="imagem veiculo">
+            <img *ngIf="selectedVehicle" [src]="selectedVehicle.img" alt="imagem veiculo">
         </div>
-        
+
     </div>
 
 
@@ -57,30 +57,30 @@
 
 <section class="rodape">
     <table>
-      <thead>
-        <tr>
-          <th>Código - Vin</th>
-          <th>Odômetro</th>
-          <th>Nível de Combustível</th>
-          <th>Status</th>
-          <th>Lat.</th>
-          <th>Long.</th>
+        <thead>
+            <tr>
+                <th>Código - Vin</th>
+                <th>Odômetro</th>
+                <th>Nível de Combustível</th>
+                <th>Status</th>
+                <th>Lat.</th>
+                <th>Long.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" [(ngModel)]="vinCode" placeholder="Ex: 2FRHDUYS2Y63NHD22454"
+                        class="vin-input-table" (keyup.enter)="searchByVin()" />
+                </td>
+                <td *ngIf="vehicleInfo">{{ vehicleInfo.odometro }} Km</td>
+                <td *ngIf="vehicleInfo">{{ vehicleInfo.nivelCombustivel }}%</td>
+                <td *ngIf="vehicleInfo">{{ vehicleInfo.status }}</td>
+                <td *ngIf="vehicleInfo">{{ vehicleInfo.lat }}</td>
+                <td *ngIf="vehicleInfo">{{ vehicleInfo.long }}</td>
 
-        </tr>
-      
-      </thead>
-      <tbody>
-        <tr>
-            <td>
-                
-            </td>
-            <td>1FTHDUYSZ45N182455</td>
-            <td>50000 Km</td>
-            <td>90%</td>
-            <td>on</td>
-            <td>-12.2232</td>
-            <td>-35.2314</td>  
-        </tr>
-      </tbody>
+                <td *ngIf="!vehicleInfo" colspan="5" class="empty-cell"></td>
+            </tr>
+        </tbody>
     </table>
-  </section>
+</section>
