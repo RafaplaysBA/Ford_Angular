@@ -1,9 +1,9 @@
-/* O Container do Menu */
+
 .menu-container {
     position: relative;
 }
 
-/* O Ícone Hamburguer */
+
 .menu-button {
     position: absolute;
     top: 20px;
@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 
-/* As 3 linhas do hamburguer */
+
 .menu-button span {
     display: block;
     height: 4px;
@@ -27,7 +27,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* A Caixa do Menu (Links) */
+
 .menu-items {
     position: fixed;
     top: 0;
@@ -37,7 +37,7 @@
     background-color: rgba(17, 108, 194, 0.986);
     padding-top: 80px;
 
-    /* ANIMAÇÃO: Começa fora da tela (esquerda) */
+  
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out;
 

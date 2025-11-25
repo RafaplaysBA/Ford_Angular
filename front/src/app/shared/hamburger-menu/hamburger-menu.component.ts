@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-hamburger-menu',
@@ -12,7 +13,10 @@ import { CommonModule } from '@angular/common';
 export class HamburgerMenuComponent {
     isOpen = false;
 
-    constructor(private router: Router) { }
+    constructor(
+        private router: Router,
+        private authService: AuthService
+    ) { }
 
     toggleMenu() {
         this.isOpen = !this.isOpen;
@@ -23,10 +27,8 @@ export class HamburgerMenuComponent {
     }
 
     logout() {
-        // Clear any stored tokens or session data here if needed
-        // localStorage.removeItem('token'); 
-        // sessionStorage.clear();
-
+        // Usa o AuthService para fazer logout
+        this.authService.logout();
         this.closeMenu();
         this.router.navigate(['/login']);
     }

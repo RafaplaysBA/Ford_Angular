@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AuthGuard } from './guard/guard.guard';
+import { authGuard } from './guard/guard.guard';
 
 export const routes: Routes = [
   {
@@ -11,16 +11,16 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component:LoginComponent
+    component: LoginComponent
   },
   {
     path: 'home',
     component: HomeComponent,
-    canActivate: [AuthGuard]
+    canActivate: [authGuard]
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [AuthGuard]
+    canActivate: [authGuard]
   }
 ];
